@@ -8,11 +8,13 @@ namespace ConsoleApplication
         public static void Main(string[] args)
         {
             string MySqlServerIP = "172.17.0.2";
-            string MySqlDbName = "test";
+            string MySqlDbName   = "test";
             string MySqlUserName = "root";
             string MySqlPassword = "mypassword";
+
             MySqlConnection dbConn = new MySqlConnection("server=" + MySqlServerIP + ";database=" + MySqlDbName + ";uid=" + MySqlUserName + ";password=" + MySqlPassword);
             MySqlCommand cmd = dbConn.CreateCommand();
+
             cmd.CommandText = "show databases";
 
             try
