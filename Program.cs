@@ -7,7 +7,7 @@ namespace ConsoleApplication
     {
         public static void Main(string[] args)
         {
-            MySqlConnection dbConn = new MySqlConnection("server=172.17.0.2;database=testdb;uid=root;password=mypassword");
+            MySqlConnection dbConn = new MySqlConnection("server=172.17.0.2;database=test;uid=root;password=mypassword");
             MySqlCommand cmd = dbConn.CreateCommand();
             cmd.CommandText = "show databases";
             

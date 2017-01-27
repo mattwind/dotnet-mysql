@@ -27,6 +27,10 @@ Here are some basic docker commands
 
 `docker inspect -f "{{ .Config.Env }}" test-mysql`
 
+Get all sorts of information on a specific container
+
+`docker inspect test-mysql`
+
 ### List containers
 
 `docker ps -a`
