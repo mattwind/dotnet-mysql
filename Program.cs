@@ -13,8 +13,11 @@ namespace ConsoleApplication
             string MySqlPassword = "mypassword";
 
             MySqlConnection dbConn = new MySqlConnection("server=" + MySqlServerIP + ";database=" + MySqlDbName + ";uid=" + MySqlUserName + ";password=" + MySqlPassword);
+
+            // Connect to Server
             MySqlCommand cmd = dbConn.CreateCommand();
 
+            // MySQL Command to run
             cmd.CommandText = "show databases";
 
             try
