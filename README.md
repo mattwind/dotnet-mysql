@@ -1,2 +1,2 @@
 # dotnet-mysql
-.NET Core MySQL
+.NET Core MySQL project
