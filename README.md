@@ -1,5 +1,6 @@
-# dotnet-mysql
-.NET Core MySQL project
+#.NET Core MySQL project
+
+Example project connects to a MySQL server.
 
 ## MySQL Server
 
