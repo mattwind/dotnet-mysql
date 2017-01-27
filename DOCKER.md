@@ -1,17 +1,25 @@
 # Docker / MySQL Container
 
-## Run a mysql server container
+In this document we assume the container is called test-mysql and the password is mypassword.
+
+### Run a mysql server container
 
 `docker run --detach --name=test-mysql --env="MYSQL_ROOT_PASSWORD=mypassword" mysql`
 
-## View container enviroment variables
+### MySQL Client
 
-`docker inspect -f "{{ .Config.Env }}" test-mysql`
+`docker run -it --link test-mysql:mysql --rm mysql sh -c 'exec mysql -h"$MYSQL_PORT_3306_TCP_ADDR" -P"$MYSQL_PORT_3306_TCP_PORT" -uroot -p"$MYSQL_ENV_MYSQL_ROOT_PASSWORD"'`
 
-## Bash Terminal
+### View Container Logs
+
+`docker logs test-mysql`
+
+### Bash Terminal
 
 `docker run -it mysql /bin/bash`
 
-## MySQL Client
 
-`docker run -it --link test-mysql:mysql --rm mysql sh -c 'exec mysql -h"$MYSQL_PORT_3306_TCP_ADDR" -P"$MYSQL_PORT_3306_TCP_PORT" -uroot -p"$MYSQL_ENV_MYSQL_ROOT_PASSWORD"'`
+### View container enviroment variables
+
+`docker inspect -f "{{ .Config.Env }}" test-mysql`
+
