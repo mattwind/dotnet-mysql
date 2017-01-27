@@ -31,9 +31,7 @@ Here are some basic docker commands
 
 `docker ps -a`
 
-### Start/Stop containers
-
-`docker start test-mysql`
+### Stop/Start containers
 
 `docker stop test-mysql`
 
@@ -43,7 +41,7 @@ Here are some basic docker commands
 
 ### View docker images
 
-`docker images -a
+`docker images -a`
 
 ### Remove image
 
